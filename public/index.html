@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="flash-comments">
+        <div class="header">
+          <div class="text">Comments</div>
+          <form id="comment-form">
+            <input
+              type="text"
+              required
+              placeholder="Enter your Name"
+              id="new_comment_name"
+            />
+            <input
+              type="email"
+              required
+              placeholder="Enter your Email"
+              id="new_comment_email"
+            />
+            <textarea
+              id="new_comment_text"
+              placeholder="Enter Comment text"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button type="submit">Send Comment</button>
+          </form>
+
+          <div class="comments-list" id="comments-list">
+            <script id="comment-template" type="text/x-template">
+              <h2 class="name">{{name}}</h2>
+              <h4 class="email">{{email}}</h4>
+              <div class="text">{{comment}}</div>
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      type="text/javascript"
+      src="https://js.pusher.com/3.2/pusher.min.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
